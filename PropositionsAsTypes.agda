@@ -26,7 +26,7 @@ infixr 2 _↔_
 -- Propositional logic
 ------------------------------------------------------------------------------
 
--- Conjunction : Product type
+-- Conjunction: Product type
 
 --      Γ ⊢ A      Γ ⊢ B
 --  --------------------------- (∧I)
@@ -124,7 +124,7 @@ app a (fun f) = f a
 ¬ A = A → ⊥
 
 ------------------------------------------------------------------------------
--- Bi-implication : A ↔ B ≡ (A → B) ∧ (B → A)
+-- Bi-implication: A ↔ B ≡ (A → B) ∧ (B → A)
 
 _↔_ : Set → Set → Set
 A ↔ B = (A → B) ∧ (B → A)
@@ -153,8 +153,8 @@ a→¬¬a a a→⊥ = a→⊥ a
 -- The existential quantifier: Sigma type
 
 -- Notation:
--- FV(β)  : Free variables of a formula β
--- P[x/t] : The substitution of a term t for every free occurrence of x in β.
+-- FV(β)  : Free variables of a formula β.
+-- β[x/t] : The substitution of a term t for every free occurrence of x in β.
 
 --    Γ ⊢ β[x/t]
 -- --------------- (∃I)
@@ -206,7 +206,7 @@ module Examples (A C : Set)(B : A → Set) where
   postulate
     someA : A
 
-  -- Generalization of De Morgan's law.
+  -- Generalization of a De Morgan's law.
   gDM : ¬ (∃ A B) ↔ ((x : A) → ¬ (B x))
   gDM = l→r , r→l
     where
