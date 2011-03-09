@@ -31,10 +31,10 @@ hw2 f (x , p) = x , f x p
 -- (2) Page 183,(Example 10)
 -- ∃a(φ(a) → ψ(a)) ∧ ∀aφ(a) → ∃aψ(a)
 
-P : (A : Set)(φ ψ : A → Set) -> A -> Set
+-- P : (A : Set)(φ ψ : A → Set) → A → Set
 
-P φ ψ a = a
+-- P a φ ψ = ψ
 
-hw3 : {A : Set}{φ ψ : A → Set} → ∃ A (P A φ ψ) ∧ ((x : A) → φ x) → ∃ A ψ
+hw3 : {A : Set}{φ ψ : A → Set} → ∃ A ( \x → (φ x → ψ x))  ∧ ((x : A) → φ x) → ∃ A ψ
 
-hw3 ((a , p) , ψ) = a , p
+hw3 ((a , p) , ψ) = a , p (ψ a)
