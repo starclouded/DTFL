@@ -38,4 +38,4 @@ hw2 f (x , p) = x , f x p
 
 hw3 : {A : Set}{φ ψ : A → Set} → Σ A ( \x → (φ x → ψ x)) × ((x : A) → φ x) → Σ A ψ
 
-hw3 ((a , p) , ψ) = a , p (ψ a)
+hw3 ((a , p) , φ) = a , p (φ a)
