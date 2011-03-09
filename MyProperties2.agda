@@ -1,6 +1,6 @@
 -- Author: Andres Eugenio Castaño Cardenas <starclouded@gmail.com>
 -- References
--- (1) M.H. Sorense, P. Urzyczyn, Lecutres on the Curry-Howard Isomorphism
+-- (1) M.H. Sorense, P. Urzyczyn, Lectures on the Curry-Howard Isomorphism
 -- (2) John O'Donnell, Discrete Mathematics Using a Computer. Springer
 
 ----------------------------------------------------------------------
@@ -32,10 +32,8 @@ hw2 f (x , p) = x , f x p
 -- (2) Page 183,(Example 10)
 -- ∃a(φ(a) → ψ(a)) ∧ ∀aφ(a) → ∃aψ(a)
 
--- P : (A : Set)(φ ψ : A → Set) -> A -> Set
-
--- P a φ ψ  = ψ
-
-hw3 : {A : Set}{φ ψ : A → Set} → Σ A ( \x → (φ x → ψ x)) × ((x : A) → φ x) → Σ A ψ
+hw3 : {A : Set}{φ ψ : A → Set} →
+      Σ A ( \x → (φ x → ψ x)) ×
+      ((x : A) → φ x) → Σ A ψ
 
 hw3 ((a , p) , φ) = a , p (φ a)
