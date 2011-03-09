@@ -6,7 +6,7 @@
 ----------------------------------------------------------------------
 -- Second part: using standard library
 
-module Myproperties2  where
+module MyProperties2  where
 
 open import Data.Product
 open import Data.Sum
