@@ -6,7 +6,7 @@
 ----------------------------------------------------------------------
 -- First part: using PropositionsAsTypes
 
-module Myproperties  where
+module MyProperties  where
 
 open import PropositionsAsTypes
 
